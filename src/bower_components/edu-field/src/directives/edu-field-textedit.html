@@ -1,0 +1,13 @@
+<div class="form-group  {{options.col}}">
+	<label for="{{id}}">
+		{{options.label || 'Text edit'}}
+		{{options.required ? '*' : ''}}
+	</label>
+	
+	<div text-angular 
+			ng-model="value"
+			autofocus="{{options.autofocus}}"
+			class="{{class}}">
+	</div>
+	
+</div>

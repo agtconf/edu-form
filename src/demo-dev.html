@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Demo eduForm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="educarm"/>
+
+    
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/angular-loading.css"> 
+	<link rel="stylesheet" type="text/css" href="bower_components/edu-field/dist/edu-field.css">
+	
+</head>
+<body ng-controller="appController">
+
+<div id="wrapper">
+    
+	 <h1>RESULT FORM:{{formData}}</h1>
+    <div class="panel panel-default">
+		<div class="panel-heading panel-title">
+		   
+		</div>
+		
+		<div class="panel-body">
+			<div >
+				<div edu-form options="options2" result="formData"> </div>
+			</div>
+		</div>
+    
+	</div>
+
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+<script src="bower_components/angular-ui-bootstrap3-patched/ui-bootstrap-tpls.js"></script>
+
+<script src="bower_components/edu-field/dist/edu-field.js"></script>
+
+
+<script src="modules/edu-form.js"></script>
+<script src="directives/edu-form.js"></script>
+<script src="directives/data-factory.js"></script>
+
+
+<script src="app.js"></script>
+<script src="app-mocks.js"></script>
+
+
+</body>
+</html>

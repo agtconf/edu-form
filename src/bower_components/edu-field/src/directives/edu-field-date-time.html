@@ -1,0 +1,16 @@
+<div class="form-group  {{options.col}}">
+	<label for="{{id}}">
+		{{options.label || 'Number'}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<input date-time-input
+		   class="form-control"
+		   id="{{id}}"
+		   placeholder="{{options.placeholder}}"
+		   autofocus="{{options.autofocus}}"
+		   ng-required="options.required"
+		   ng-disabled="options.disabled"
+		   min="{{options.min}}"
+		   max="{{options.max}}"
+		   ng-model="value">
+</div>

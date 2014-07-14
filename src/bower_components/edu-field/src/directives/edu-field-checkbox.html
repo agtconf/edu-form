@@ -1,0 +1,22 @@
+<div class="checkbox  {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}">
+	<label>
+		<input type="checkbox"
+				
+				id="{{id}}"
+				name="name"
+				ng-blur="onBlur()"
+				ng-focus="onFocus()"
+				ng-change="onChange()"
+				ng-required="options.required"
+				ng-disabled="options.disabled"
+				ng-model="value">
+		{{options.label || 'Checkbox'}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<div class="help-block has-error" ng-show="$invalid">
+			<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un valor</small>
+			<small class="error" ng-show="$invalidMinlength">Debe tener al menos {{options.min}} caracteres</small>
+			<small class="error" ng-show="$invalidMaxlength">No puede tener más de {{options.max}} caracteres</small>
+			<small class="error" ng-show="$invalidPattern">Introduzca un valor válido</small>
+		 </div>
+</div>

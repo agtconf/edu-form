@@ -1,0 +1,16 @@
+<div class="form-group  {{options.col}}">
+	<label for="{{id}}">
+		{{options.label || 'Semana'}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<input type="week"
+		   class="form-control"
+		   id="{{id}}"
+		   placeholder="{{options.placeholder}}"
+		   autofocus="{{options.autofocus}}"
+		   ng-required="options.required"
+		   ng-disabled="options.disabled"
+		   ng-min="{{options.min}}"
+		   ng-max="{{options.max}}"
+		   ng-model="value">
+</div>

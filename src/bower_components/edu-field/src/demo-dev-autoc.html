@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Demo eduField</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="educarm"/>
+
+    
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/angular-loading.css"> 
+	<link rel="stylesheet" type="text/css" href="css/edu-complete.css">
+	<script src="js/iban.js"></script>
+</head>
+<body ng-controller="appController">
+
+<div id="wrapper">
+    
+	<h2>FIELD VALUE:{{result}}</h2>
+	<script>
+	 var iban='ES1801820153280201552860';
+	//if(IBAN.isValid(iban)) alert(IBAN.printFormat(iban, "-")); </script>
+    <div class="panel panel-default">
+		<div class="panel-heading panel-title">
+		   
+		</div>
+		
+		<div class="panel-body">
+			<div >
+			
+				
+				<edu-field 
+							  options="fields[10]"
+							  form-value="result[field.key || 0]"
+							  class=""
+							  form-id="formid"
+							  form-name="formname"
+							  index="0">
+				</edu-field>
+			</div>
+		</div>
+    
+	</div>
+
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+
+
+
+<script src="modules/edu-field.js"></script>
+<script src="directives/edu-complete.js"></script>
+<script src="directives/edu-field.js"></script>
+<script src="directives/data-factory.js"></script>
+
+
+
+
+<script src="app.js"></script>
+<script src="app-mocks.js"></script>
+
+
+</body>
+</html>

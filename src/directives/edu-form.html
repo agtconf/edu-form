@@ -1,0 +1,44 @@
+<form class="formedu" role="form" novalidate autocomplete="off" name="{{options.formMetaData.name}}" id="{{options.formMetaData.id}}">
+  
+    <tabset ng-if="options.formMetaData.tabsShow">
+		<tab heading="{{tab.tabname}}" ng-repeat="tab in options.formFields.tabs">
+		  
+		    <div ng-repeat="field in tab.fields">
+			  <ng-form name="{{options.formMetaData.name}}">
+				<edu-field 
+							  options="field"
+							  form-value="result[field.key||$index]"
+							  class="formly-field"
+							  form-id="{{options.formMetaData.id}}"
+							  form-name="{{optionx.formMetaData.name}}"
+							  index="{{$index}}">
+				</edu-field>
+			  </ng-form>	
+			</div>
+		 
+		</tab>
+	</tabset>
+
+	<div ng-if="!options.formMetaData.tabsShow" ng-repeat="tab in options.formFields.tabs">
+		
+			<edu-field ng-repeat="field in tab.fields"
+						  options="field"
+						  form-value="result[field.key||$index]"
+						  class="formly-field"
+						  form-id="{{options.formMetaData.id}}"
+						  form-name="{{options.formMetaData.name}}"
+						  index="{{$index}}">
+			</edu-field>
+		
+	</div>
+	
+		
+	<div class="well form-actions  col-md-12" > 
+        <div class="col-md-offset-2">	
+					<button ng-click="save()"  ng-disabled="{{options.formMetaData.name+'.$invalid'}}" class="btn btn-primary">Guardar</button> 
+					<button ng-click="cancel()" class="btn">Cancelar</button>
+        </div>					
+	</div> 
+		
+	
+</form>

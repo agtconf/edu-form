@@ -1,0 +1,30 @@
+<div class="form-group  {{options.col}}"  ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}">
+	<label for="{{id}}">
+		{{options.label || 'Number'}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<input type="number"
+		   class="form-control"
+		   id="{{id}}"
+		   placeholder="{{options.placeholder}}"
+		   ng-blur="onBlur()"
+		   ng-focus="onFocus()"
+		   ng-change="onChange()"
+		   autofocus="{{options.autofocus}}"
+		   ng-required="{{options.required}}"
+		   ng-disabled="{{options.disabled}}"
+		   ng-pattern="{{options.pattern}}"
+		   min="{{options.min}}"
+		   max="{{options.max}}"
+		   ng-minlength="{{options.minlength}}"
+		   ng-maxlength="{{options.maxlength}}"
+		   ng-model="value">
+		   <div class="help-block has-error" ng-show="$invalid">
+				<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un valor. </small>
+				<small class="error" ng-show="$invalidMinlength">Debe tener al menos {{options.minlength}} caracteres. </small>
+				<small class="error" ng-show="$invalidMaxlength">No puede tener más de {{options.maxlength}} caracteres. </small>
+				<small class="error" ng-show="$invalidMin">El valor debe ser mayor o igual que {{options.min}}. </small>
+				<small class="error" ng-show="$invalidMax">El valor debe ser menor o igual que {{options.max}}. </small>
+				<small class="error" ng-show="$invalidPattern">Introduzca un valor válido. </small>
+			 </div>
+</div>

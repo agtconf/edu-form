@@ -1,0 +1,16 @@
+<div class="form-group  {{options.col}}">
+	<label for="{{id}}">
+		{{options.label || 'Range'}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<input type="range"
+		   class="form-control"
+		   id="{{id}}"
+		   placeholder="{{options.placeholder}}"
+		   ng-required="options.required"
+		   ng-disabled="options.disabled"
+		   min="{{options.min}}"
+		   max="{{options.max}}"
+		   ng-model="value">
+
+</div>

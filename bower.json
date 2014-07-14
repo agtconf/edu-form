@@ -1,0 +1,35 @@
+{
+  "name": "edu-form",
+  "version": "0.0.1",
+  "authors": [
+    "educarm"
+  ],
+  "main": [
+    "dist/edu-form.js",
+	"dist/edu-form.css"
+
+  ],
+  "description": "edu-form es un formulario de datos",
+  "keywords": [
+    "AngularJs",
+    "form",
+    "grid",
+    "json",
+    "html"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+	
+	"edu-field":"https://github.com/educarm/edu-field.git"
+  },
+  "devDependencies": {
+    "angular-mocks": ""
+  }
+}
