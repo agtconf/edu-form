@@ -20,7 +20,7 @@
 	</tabset>
 
 	<div ng-if="!options.formMetaData.tabsShow" ng-repeat="tab in options.formFields.tabs">
-		
+		  <ng-form name="{{options.formMetaData.name}}">
 			<edu-field ng-repeat="field in tab.fields"
 						  options="field"
 						  form-value="result[field.key||$index]"
@@ -29,7 +29,7 @@
 						  form-name="{{options.formMetaData.name}}"
 						  index="{{$index}}">
 			</edu-field>
-		
+		  </ng-form>
 	</div>
 	
 		
